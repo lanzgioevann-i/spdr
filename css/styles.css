@@ -1,0 +1,108 @@
+html{
+	overflow-x: hidden;
+}
+
+body {
+	background-color: #ffffff ; /* #95a5a6 */
+	display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+	overflow-x: hidden;
+}
+
+main {
+    flex: 1 0 auto;
+  }
+
+
+nav {
+	margin-top: -110px;
+}
+
+@media only screen and (min-width: 601px){
+	nav {
+		margin-top: -112px;
+	}
+}
+
+@media only screen and (min-width: 993px) {
+	nav {
+		margin-top: -112px; /*-116*/
+	}
+}
+
+header{
+	z-index: 1;
+}
+
+.header-image {
+	width: 100%;
+	height: auto;
+}
+
+.tab-content{
+	min-height: 500px;
+}
+
+@media only screen and (min-width: 993px) { 
+	.tab-link {
+	  transform: translateX(32%);
+	  -webkit-transform: translateX(32%);
+	}
+}
+
+.lanz-bluebg{
+	background-color: #34495e !important;
+	color: #000 !important;
+}
+
+.lanz-transparent{
+	background-color:transparent;
+	color: #000 !important;
+}
+
+.lanz-why{
+	background-color: #cbcbcb !important;
+}
+
+.lanz-gray{
+  background-color: #95a5a6 !important;
+}
+
+.lanz-team{
+  background-color: #34495e !important;
+  color: #f8f8f8 !important;
+}
+
+.lanz-showcase{
+  background-color: #16a085 !important;
+}
+
+.lanz-footer {
+	background-color: #282828 !important;
+}
+
+.lanz-copyright {
+	background-color: #161616 !important;
+}
+
+
+#sticky {	
+
+}	
+
+#sticky.stick {
+  background-color: #222e3b !important; /**/
+  transition: background-color .3s ease 0s;
+  width: 100%;
+  margin-top: 0 !important;
+  position: fixed;
+  top: 0;
+  z-index: 10000;
+  box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
+}
+
+#sticky.inv{
+  background-color: transparent !important; /**/
+  transition: background-color .5s ease-out 0s;
+}
