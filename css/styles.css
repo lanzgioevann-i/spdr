@@ -94,8 +94,23 @@ and (orientation : portrait) {
 .icon-block {
   padding: 0 15px;
 }
+
 .icon-block .material-icons {
   font-size: inherit;
+}
+
+.preloader-background {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #eee;
+	
+	position: fixed;
+	z-index: 100;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;	
 }
 
 .lanz-bluebg{
@@ -132,6 +147,7 @@ and (orientation : portrait) {
 .lanz-copyright {
 	background-color: #161616 !important;
 }
+
 
 
 #sticky {	
