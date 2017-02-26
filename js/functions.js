@@ -1,110 +1,18 @@
 
-$("#tab-opener").click(function() { //scroll to top
+$("#tab-opener").click(function() { //scroll parallax tab change bug fix
+	/*
+		SCROLL TO TOP
+	
     $('html, body').animate({
         scrollTop: $("#sticky-anchor2").offset().top
     }, 300, "easeOutQuint", function() {
 		//after the animation is finished
 		//$(window).scrollTop($(window).scrollTop() - 1); //move the scroll slightly to fix parallax loading image
-		$('html, body').animate({scrollTop: $("#sticky-anchor").offset().top}, 100, "easeOutQuint");
+		//$('html, body').animate({scrollTop: $(window).scrollTop() + 10}, 100, "easeOutQuint"); //bounce effect scroll down
 	});
-	
+	*/
+	$('html, body').animate({scrollTop: $(window).scrollTop() - 1}, 100, "easeOutQuint"); //move the scroll slightly to fix parallax loading image
 });
-
-/*
-var height1, height2, height3, height4;
-var scrollTop1, scrollTop2, scrollTop3, scrollTop4;
-
-$('#tab-opener1').click(function () {
-	
-	if( $('#tab-opener1').hasClass("active")){
-		height1 = $(window).height();
-		scrollTop1 = $(window).scrollTop();
-	}
-	else if( $('#tab-opener2').hasClass("active")){
-		height2 = $(window).height();
-		scrollTop2 = $(window).scrollTop();
-	}
-	else if( $('#tab-opener3').hasClass("active")){
-		height3 = $(window).height();
-		scrollTop3 = $(window).scrollTop();
-	}
-	else if( $('#tab-opener4').hasClass("active")){
-		height4 = $(window).height();
-		scrollTop4 = $(window).scrollTop();
-	}
-	
-	$(window).height(height1);
-	$(window).scrollTop(0);
-	
-	
-});
-
-$('#tab-opener2').click(function () {
-	if( $('#tab-opener1').hasClass("active")){
-		height1 = $(window).height();
-		scrollTop1 = $(window).scrollTop();
-	}
-	else if( $('#tab-opener2').hasClass("active")){
-		height2 = $(window).height();
-		scrollTop2 = $(window).scrollTop();
-	}
-	else if( $('#tab-opener3').hasClass("active")){
-		height3 = $(window).height();
-		scrollTop3 = $(window).scrollTop();
-	}
-	else if( $('#tab-opener4').hasClass("active")){
-		height4 = $(window).height();
-		scrollTop4 = $(window).scrollTop();
-	}
-	
-	$(window).height(height2);
-	$(window).scrollTop(scrollTop2);
-});
-
-$('#tab-opener3').click(function () {
-	if( $('#tab-opener1').hasClass("active")){
-		height1 = $(window).height();
-		scrollTop1 = $(window).scrollTop();
-	}
-	else if( $('#tab-opener2').hasClass("active")){
-		height2 = $(window).height();
-		scrollTop2 = $(window).scrollTop();
-	}
-	else if( $('#tab-opener3').hasClass("active")){
-		height3 = $(window).height();
-		scrollTop3 = $(window).scrollTop();
-	}
-	else if( $('#tab-opener4').hasClass("active")){
-		height4 = $(window).height();
-		scrollTop4 = $(window).scrollTop();
-	}
-	
-	$(window).height(height3);
-	$(window).scrollTop(scrollTop3);
-});
-
-$('#tab-opener4').click(function () {
-	if( $('#tab-opener1').hasClass("active")){
-		height1 = $(window).height();
-		scrollTop1 = $(window).scrollTop();
-	}
-	else if( $('#tab-opener2').hasClass("active")){
-		height2 = $(window).height();
-		scrollTop2 = $(window).scrollTop();
-	}
-	else if( $('#tab-opener3').hasClass("active")){
-		height3 = $(window).height();
-		scrollTop3 = $(window).scrollTop();
-	}
-	else if( $('#tab-opener4').hasClass("active")){
-		height4 = $(window).height();
-		scrollTop4 = $(window).scrollTop();
-	}
-	
-	$(window).height(height4);
-	$(window).scrollTop(scrollTop4);
-});
-*/
 
 
 function sticky_relocate() { //sticky nav
