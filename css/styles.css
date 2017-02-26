@@ -5,8 +5,8 @@ html{
 body {
 	background-color: #ffffff ; /* #95a5a6 */
 	display: flex;
-  min-height: 100vh;
-  flex-direction: column;
+    min-height: 100vh;
+    flex-direction: column;
 	overflow-x: hidden;
 }
 
