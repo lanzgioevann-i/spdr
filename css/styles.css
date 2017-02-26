@@ -44,11 +44,58 @@ header{
 	min-height: 500px;
 }
 
-@media only screen and (min-width: 993px) { 
+@media only screen 
+and (min-width: 993px) 
+and (max-height: 800px) { 
 	.tab-link {
-	  transform: translateX(32%);
-	  -webkit-transform: translateX(32%);
+	  transform: translateX(35%);
+	  -webkit-transform: translateX(35%);
 	}
+}
+
+@media only screen 
+and (min-device-width : 1024px) 
+and (max-device-width : 1366px)
+and (orientation : portrait) { 
+	/* IPAD PRO PORTRAIT */
+	.tab-link {
+	  transform: translateX(30%);
+	  -webkit-transform: translateX(30%);
+	}
+}
+
+.parallax-container {
+  min-height: 380px;
+  line-height: 0;
+  height: auto;
+  color: rgba(255,255,255,.9);
+}
+
+.parallax-container .section {
+  width: 100%;
+}
+
+@media only screen and (max-width : 992px) {
+  .parallax-container .section {
+    position: absolute;
+    top: 40%;
+  }
+  #index-banner .section {
+    top: 10%;
+  }
+}
+
+@media only screen and (max-width : 600px) {
+  #index-banner .section {
+    top: 0;
+  }
+}
+
+.icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+  font-size: inherit;
 }
 
 .lanz-bluebg{

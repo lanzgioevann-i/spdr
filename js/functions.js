@@ -1,3 +1,96 @@
+var height1, height2, height3, height4;
+var scrollTop1, scrollTop2, scrollTop3, scrollTop4;
+
+$('#tab-opener1').click(function () {
+	if( $('#tab-opener1').hasClass("active")){
+		height1 = $(window).height();
+		scrollTop1 = $(window).scrollTop();
+	}
+	else if( $('#tab-opener2').hasClass("active")){
+		height2 = $(window).height();
+		scrollTop2 = $(window).scrollTop();
+	}
+	else if( $('#tab-opener3').hasClass("active")){
+		height3 = $(window).height();
+		scrollTop3 = $(window).scrollTop();
+	}
+	else if( $('#tab-opener4').hasClass("active")){
+		height4 = $(window).height();
+		scrollTop4 = $(window).scrollTop();
+	}
+	
+	$(window).height(height1);
+	$(window).scrollTop(scrollTop1);
+});
+	
+$('#tab-opener2').click(function () {
+	if( $('#tab-opener1').hasClass("active")){
+		height1 = $(window).height();
+		scrollTop1 = $(window).scrollTop();
+	}
+	else if( $('#tab-opener2').hasClass("active")){
+		height2 = $(window).height();
+		scrollTop2 = $(window).scrollTop();
+	}
+	else if( $('#tab-opener3').hasClass("active")){
+		height3 = $(window).height();
+		scrollTop3 = $(window).scrollTop();
+	}
+	else if( $('#tab-opener4').hasClass("active")){
+		height4 = $(window).height();
+		scrollTop4 = $(window).scrollTop();
+	}
+	
+	$(window).height(height2);
+	$(window).scrollTop(scrollTop2);
+});
+
+$('#tab-opener3').click(function () {
+	if( $('#tab-opener1').hasClass("active")){
+		height1 = $(window).height();
+		scrollTop1 = $(window).scrollTop();
+	}
+	else if( $('#tab-opener2').hasClass("active")){
+		height2 = $(window).height();
+		scrollTop2 = $(window).scrollTop();
+	}
+	else if( $('#tab-opener3').hasClass("active")){
+		height3 = $(window).height();
+		scrollTop3 = $(window).scrollTop();
+	}
+	else if( $('#tab-opener4').hasClass("active")){
+		height4 = $(window).height();
+		scrollTop4 = $(window).scrollTop();
+	}
+	
+	$(window).height(height3);
+	$(window).scrollTop(scrollTop3);
+});
+
+$('#tab-opener4').click(function () {
+	if( $('#tab-opener1').hasClass("active")){
+		height1 = $(window).height();
+		scrollTop1 = $(window).scrollTop();
+	}
+	else if( $('#tab-opener2').hasClass("active")){
+		height2 = $(window).height();
+		scrollTop2 = $(window).scrollTop();
+	}
+	else if( $('#tab-opener3').hasClass("active")){
+		height3 = $(window).height();
+		scrollTop3 = $(window).scrollTop();
+	}
+	else if( $('#tab-opener4').hasClass("active")){
+		height4 = $(window).height();
+		scrollTop4 = $(window).scrollTop();
+	}
+	
+	$(window).height(height4);
+	$(window).scrollTop(scrollTop4);
+});
+
+
+
 function sticky_relocate() {
   var window_top = $(window).scrollTop();
   var div_top = $('#sticky-anchor').offset().top;
@@ -57,3 +150,4 @@ $(document).ready(function(){
 
   }); // end of document ready
 })(jQuery); // end of jQuery name space
+
