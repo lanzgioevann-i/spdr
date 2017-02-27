@@ -34,7 +34,6 @@ $(window).load(function() {
 		}, 10);
 		
 	}, 1600);
-	alert("YAY");
 });
 
 $("#tab-opener").click(function() { //tab preloader
