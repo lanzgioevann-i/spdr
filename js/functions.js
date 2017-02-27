@@ -11,6 +11,8 @@ document.addEventListener("DOMContentLoaded", function(){
 		}, 10);
 		
 	}, 1600);
+	
+	alert("LOADED!");
 });
 
 $("#tab-opener").click(function() { //tab preloader
