@@ -1,5 +1,5 @@
 var tab1loaded, tab2loaded, tab3loaded, tab4loaded;
-
+/*
 document.addEventListener("DOMContentLoaded", function(){
 	$("#whole-content").addClass("tab-display");
 	$("#whole-content").addClass("tab-shower");
@@ -16,6 +16,25 @@ document.addEventListener("DOMContentLoaded", function(){
 		
 	}, 1600);
 	
+});
+*/
+
+$(window).load(function() {
+	$("#whole-content").addClass("tab-display");
+	$("#whole-content").addClass("tab-shower");
+	
+	$('.tab1-preloader').delay(1000).fadeOut('slow');
+		
+	setTimeout(function(){
+		$('.tab1-hider').addClass("tab-display");
+		setTimeout(function() {
+			$('.tab1-hider').addClass("tab-shower");
+			$(window).scrollTop($(window).scrollTop() + 1);
+			$(window).scrollTop($(window).scrollTop() - 1);
+		}, 10);
+		
+	}, 1600);
+	alert("YAY");
 });
 
 $("#tab-opener").click(function() { //tab preloader
