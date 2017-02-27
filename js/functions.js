@@ -20,8 +20,8 @@ document.addEventListener("DOMContentLoaded", function(){
 */
 
 $(window).load(function() {
-	$("#whole-content").addClass("tab-display");
-	$("#whole-content").addClass("tab-shower");
+	//$("#whole-content").addClass("tab-display");
+	//$("#whole-content").addClass("tab-shower");
 	
 	$('.tab1-preloader').delay(1000).fadeOut('slow');
 		
