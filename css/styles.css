@@ -41,7 +41,56 @@ header{
 }
 
 .tab-content{
-	min-height: 500px;
+	min-height: auto;
+}
+
+
+.preloader-background {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #fff;
+	position: relative;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;	
+	margin-top: 200px;
+	margin-bottom: 200px;
+}
+
+.tab1-hider {
+	visibility: hidden;
+	opacity: 0;
+	display: none;
+}
+
+.tab2-hider {
+	visibility: hidden;
+	opacity: 0;
+	display: none;
+}
+
+.tab3-hider {
+	visibility: hidden;
+	opacity: 0;
+	display: none;
+}
+
+.tab4-hider {
+	visibility: hidden;
+	opacity: 0;
+	display: none;
+}
+
+.tab-display{
+	display: block;
+}
+
+.tab-shower {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 1s, visibility 1s;
 }
 
 @media only screen 
@@ -97,20 +146,6 @@ and (orientation : portrait) {
 
 .icon-block .material-icons {
   font-size: inherit;
-}
-
-.preloader-background {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	background-color: #eee;
-	
-	position: fixed;
-	z-index: 100;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;	
 }
 
 .lanz-bluebg{

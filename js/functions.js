@@ -1,26 +1,59 @@
+var tab1loaded, tab2loaded, tab3loaded, tab4loaded;
+
 document.addEventListener("DOMContentLoaded", function(){
-	$('.preloader-background').delay(1700).fadeOut('slow');
-	
-	$('.preloader-wrapper')
-		.delay(1700)
-		.fadeOut();
-	
+	$('.tab1-preloader').delay(1000).fadeOut('slow');
+		
+	setTimeout(function(){
+		$('.tab1-hider').addClass("tab-display");
+		setTimeout(function() {
+			$('.tab1-hider').addClass("tab-shower");
+			$(window).scrollTop($(window).scrollTop() + 1);
+		}, 10);
+		
+	}, 1600);
 });
 
-
-$("#tab-opener").click(function() { //scroll parallax tab change bug fix
-	/*
-		SCROLL TO TOP
+$("#tab-opener").click(function() { //tab preloader
 	
-    $('html, body').animate({
-        scrollTop: $("#sticky-anchor2").offset().top
-    }, 300, "easeOutQuint", function() {
-		//after the animation is finished
-		//$(window).scrollTop($(window).scrollTop() - 1); //move the scroll slightly to fix parallax loading image
-		//$('html, body').animate({scrollTop: $(window).scrollTop() + 10}, 100, "easeOutQuint"); //bounce effect scroll down
-	});
-	*/
-	$('html, body').animate({scrollTop: $(window).scrollTop() - 1}, 100, "easeOutQuint"); //move the scroll slightly to fix parallax loading image
+	var clicked = event.target.id;
+    if(clicked === "tab-opener2"){
+		$('.tab2-preloader').delay(600).fadeOut('slow');
+		
+		setTimeout(function(){
+			$('.tab2-hider').addClass("tab-display");
+			setTimeout(function() {
+				$('.tab2-hider').addClass("tab-shower");
+				//$(window).scrollTop($(window).scrollTop() + 1);
+			}, 10);
+		}, 1200);
+	}
+	else if(clicked === "tab-opener3"){
+		$('.tab3-preloader').delay(600).fadeOut('slow');
+		
+		setTimeout(function(){
+			$('.tab3-hider').addClass("tab-display");
+			setTimeout(function() {
+				$('.tab3-hider').addClass("tab-shower");
+				//$(window).scrollTop($(window).scrollTop() + 1);
+			}, 10);
+		}, 1200);
+	}
+	else if(clicked === "tab-opener4"){
+		$('.tab4-preloader').delay(600).fadeOut('slow');
+		
+		setTimeout(function(){
+			$('.tab4-hider').addClass("tab-display");
+			setTimeout(function() {
+				$('.tab4-hider').addClass("tab-shower");
+				//$(window).scrollTop($(window).scrollTop() + 1);
+			}, 10);
+		}, 1200);
+	}
+	
+	//move the scroll slightly to fix parallax loading image
+	setTimeout(function() {
+		$(window).scrollTop($(window).scrollTop() + 1);
+	}, 10);
 });
 
 
