@@ -1,6 +1,9 @@
 var tab1loaded, tab2loaded, tab3loaded, tab4loaded;
 
 document.addEventListener("DOMContentLoaded", function(){
+	$("#whole-content").addClass("tab-display");
+	$("#whole-content").addClass("tab-shower");
+	
 	$('.tab1-preloader').delay(1000).fadeOut('slow');
 		
 	setTimeout(function(){
@@ -8,9 +11,11 @@ document.addEventListener("DOMContentLoaded", function(){
 		setTimeout(function() {
 			$('.tab1-hider').addClass("tab-shower");
 			$(window).scrollTop($(window).scrollTop() + 1);
+			$(window).scrollTop($(window).scrollTop() - 1);
 		}, 10);
 		
 	}, 1600);
+	
 });
 
 $("#tab-opener").click(function() { //tab preloader
@@ -53,6 +58,7 @@ $("#tab-opener").click(function() { //tab preloader
 	//move the scroll slightly to fix parallax loading image
 	setTimeout(function() {
 		$(window).scrollTop($(window).scrollTop() + 1);
+		$(window).scrollTop($(window).scrollTop() - 1);
 	}, 10);
 });
 
