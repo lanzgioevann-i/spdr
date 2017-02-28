@@ -3,11 +3,12 @@ html{
 }
 
 body {
-	background-color: #ffffff ; /* #95a5a6 */
+	background-color: #fff; /* #95a5a6 */
 	display: flex;
     min-height: 100vh;
     flex-direction: column;
 	overflow-x: hidden;
+	font-family: 'roboto';
 }
 
 main {
@@ -16,7 +17,7 @@ main {
 
 
 nav {
-	margin-top: -110px;
+	margin-top: -104px; /*-110*/
 }
 
 @media only screen and (min-width: 601px){
@@ -35,9 +36,75 @@ header{
 	z-index: 1;
 }
 
+@font-face {
+	font-family: 'roboto';
+	src: url("fonts/Roboto.ttf") format('truetype');
+}
+
+@font-face {
+  font-family: 'qg';
+  src: url("fonts/QG.ttf") format('truetype');
+}
+
+@font-face {
+  font-family: 'kg';
+  src: url("fonts/KGBlankSpaceSketch.ttf") format('truetype');
+}
+
+@font-face {
+	font-family: 'blogger';
+	src: url("fonts/BloggerSans.otf") format('opentype');
+}
+
+.font-qg{
+	font-family: 'qg', sans-serif;
+	font-size: 73px;
+	color: #2b6da9 !important;
+}
+
+.font-kg{
+	font-family: 'kg', sans-serif;
+	font-size: 75px;
+	color: #b1463c !important;
+}
+
+.font-blogger {
+	font-family: 'blogger', sans-serif;
+	font-size: 25px;
+	color: #fff !important;
+}
+
+@media only screen 
+and (min-width: 700px) {
+	.font-qg{
+		font-family: 'qg', sans-serif;
+		font-size: 132px;
+		color: #2b6da9 !important;
+	}
+
+	.font-kg{
+		font-family: 'kg', sans-serif;
+		font-size: 135px;
+		color: #b1463c !important;
+	}
+
+	.font-blogger {
+		font-family: 'blogger', sans-serif;
+		font-size: 50px;
+		color: #fff !important;
+	}
+}
+
 .header-image {
-	width: 100%;
-	height: auto;
+	position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    max-width: 100%;
+    max-height: 100%;
+    margin: auto;
+    overflow: auto;
 }
 
 .tab-content{
@@ -97,8 +164,8 @@ header{
 and (min-width: 993px) 
 and (max-height: 800px) { 
 	.tab-link {
-	  transform: translateX(35%);
-	  -webkit-transform: translateX(35%);
+	  transform: translateX(33%);
+	  -webkit-transform: translateX(33%);
 	}
 }
 
@@ -148,6 +215,15 @@ and (orientation : portrait) {
   font-size: inherit;
 }
 
+.lanz-bgworks {
+	background-color: #b1463c !important;
+}
+
+.lanz-bgteam {
+	background-color: #3d3d3d !important;
+	color: #fff !important;
+}
+
 .lanz-bluebg{
 	background-color: #34495e !important;
 	color: #000 !important;
@@ -176,11 +252,11 @@ and (orientation : portrait) {
 }
 
 .lanz-footer {
-	background-color: #282828 !important;
+	background-color: #150d0a !important;
 }
 
 .lanz-copyright {
-	background-color: #161616 !important;
+	background-color: #0b0805 !important;
 }
 
 
@@ -190,7 +266,7 @@ and (orientation : portrait) {
 }	
 
 #sticky.stick {
-  background-color: #222e3b !important; /**/
+  background-color: #311c12 !important; /**/
   transition: background-color .5s ease 0s;
   width: 100%;
   margin-top: 0 !important;
@@ -201,6 +277,9 @@ and (orientation : portrait) {
 }
 
 #sticky.inv{
-  background-color: transparent !important; /**/
+  background-color: transparent !important;
   transition: background-color .5s ease-out 0s;
+  /*
+  */
 }
+
