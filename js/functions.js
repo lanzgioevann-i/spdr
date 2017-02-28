@@ -1,28 +1,10 @@
+
+
 var tab1loaded, tab2loaded, tab3loaded, tab4loaded;
-/*
-document.addEventListener("DOMContentLoaded", function(){
-	$("#whole-content").addClass("tab-display");
-	$("#whole-content").addClass("tab-shower");
-	
-	$('.tab1-preloader').delay(1000).fadeOut('slow');
-		
-	setTimeout(function(){
-		$('.tab1-hider').addClass("tab-display");
-		setTimeout(function() {
-			$('.tab1-hider').addClass("tab-shower");
-			$(window).scrollTop($(window).scrollTop() + 1);
-			$(window).scrollTop($(window).scrollTop() - 1);
-		}, 10);
-		
-	}, 1600);
-	
-});
-*/
 
 $(window).load(function() {
 	//$("#whole-content").addClass("tab-display");
 	//$("#whole-content").addClass("tab-shower");
-	
 	$('.tab1-preloader').delay(1000).fadeOut('slow');
 		
 	setTimeout(function(){
@@ -31,6 +13,8 @@ $(window).load(function() {
 			$('.tab1-hider').addClass("tab-shower");
 			$(window).scrollTop($(window).scrollTop() + 1);
 			$(window).scrollTop($(window).scrollTop() - 1);
+			
+			tab1loaded = true;
 		}, 10);
 		
 	}, 1600);
@@ -39,45 +23,139 @@ $(window).load(function() {
 $("#tab-opener").click(function() { //tab preloader
 	
 	var clicked = event.target.id;
-    if(clicked === "tab-opener2"){
-		$('.tab2-preloader').delay(600).fadeOut('slow');
+	
+	if(clicked === "tab-opener1"){
+		if(!tab1loaded){
+			//if tab1 still not loaded
+			$('.tab1-preloader').delay(600).fadeOut('slow');
 		
-		setTimeout(function(){
-			$('.tab2-hider').addClass("tab-display");
-			setTimeout(function() {
-				$('.tab2-hider').addClass("tab-shower");
-				//$(window).scrollTop($(window).scrollTop() + 1);
-			}, 10);
-		}, 1200);
+			setTimeout(function(){
+				$('.tab1-hider').addClass("tab-display");
+				setTimeout(function() {
+					$('.tab1-hider').addClass("tab-shower");
+					$(window).scrollTop($(window).scrollTop() + 1);
+					$(window).scrollTop($(window).scrollTop() - 1);
+					$('#tab1').addClass("tab-current");
+					tab1loaded = true;
+				}, 10);
+				
+			}, 1600);
+		}
+		else{
+			if(!($("#tab1").hasClass("tab-current"))){
+				$("#tab1").delay(10).fadeIn('slow');
+				setTimeout(function() {
+					$(window).scrollTop($(window).scrollTop() + 1);
+					$(window).scrollTop($(window).scrollTop() - 1);
+				}, 20);
+				$('#tab1').addClass("tab-current");
+			}
+		}
+		
+		$("#tab2").fadeOut('fast');
+		$("#tab2").removeClass("tab-current");
+		$("#tab3").fadeOut('fast');
+		$("#tab3").removeClass("tab-current");
+		$("#tab4").fadeOut('fast');
+		$("#tab4").removeClass("tab-current");
+	}
+    else if(clicked === "tab-opener2"){
+		
+		if(!tab2loaded){
+			$("#tab2").show();
+			$('.tab2-preloader').delay(600).fadeOut('slow');
+		
+			setTimeout(function(){
+				$('.tab2-hider').addClass("tab-display");
+				setTimeout(function() {
+					$('.tab2-hider').addClass("tab-shower");
+					$('#tab2').addClass("tab-current");
+					tab2loaded = true;
+				}, 10);
+			}, 1200);
+		}
+		else{
+			if(!($("#tab2").hasClass("tab-current"))){
+				$("#tab2").delay(10).fadeIn('slow');
+				$('#tab2').addClass("tab-current");
+			}
+		}
+		
+		$("#tab1").fadeOut('fast');
+		$("#tab1").removeClass("tab-current");
+		$("#tab3").fadeOut('fast');
+		$("#tab3").removeClass("tab-current");
+		$("#tab4").fadeOut('fast');
+		$("#tab4").removeClass("tab-current");
+		
 	}
 	else if(clicked === "tab-opener3"){
-		$('.tab3-preloader').delay(600).fadeOut('slow');
+		if(!tab3loaded){
+			$("#tab3").show();
+			$('.tab3-preloader').delay(600).fadeOut('slow');
 		
-		setTimeout(function(){
-			$('.tab3-hider').addClass("tab-display");
-			setTimeout(function() {
-				$('.tab3-hider').addClass("tab-shower");
-				//$(window).scrollTop($(window).scrollTop() + 1);
-			}, 10);
-		}, 1200);
+			setTimeout(function(){
+				$('.tab3-hider').addClass("tab-display");
+				setTimeout(function() {
+					$('.tab3-hider').addClass("tab-shower");
+					$('#tab3').addClass("tab-current");
+					tab3loaded = true;
+				}, 10);
+			}, 1200);
+		}
+		else{
+			if(!($("#tab3").hasClass("tab-current"))){
+				$("#tab3").delay(10).fadeIn('slow');
+				$('#tab3').addClass("tab-current");
+			}
+		}
+		
+		$("#tab1").fadeOut('fast');
+		$("#tab1").removeClass("tab-current");
+		$("#tab2").fadeOut('fast');
+		$("#tab2").removeClass("tab-current");
+		$("#tab4").fadeOut('fast');
+		$("#tab4").removeClass("tab-current");
+		
 	}
 	else if(clicked === "tab-opener4"){
-		$('.tab4-preloader').delay(600).fadeOut('slow');
+		if(!tab4loaded){
+			$("#tab4").show();
+			$('.tab4-preloader').delay(600).fadeOut('slow');
 		
-		setTimeout(function(){
-			$('.tab4-hider').addClass("tab-display");
-			setTimeout(function() {
-				$('.tab4-hider').addClass("tab-shower");
-				//$(window).scrollTop($(window).scrollTop() + 1);
-			}, 10);
-		}, 1200);
+			setTimeout(function(){
+				$('.tab4-hider').addClass("tab-display");
+				setTimeout(function() {
+					$('.tab4-hider').addClass("tab-shower");
+					$('#tab4').addClass("tab-current");
+					tab4loaded = true;
+				}, 10);
+			}, 1200);
+		}
+		else{
+			if(!($("#tab4").hasClass("tab-current"))){
+				$("#tab4").delay(10).fadeIn('slow');
+				$('#tab4').addClass("tab-current");
+			}
+		}
+		
+		$("#tab1").fadeOut('fast');
+		$("#tab1").removeClass("tab-current");
+		$("#tab3").fadeOut('fast');
+		$("#tab3").removeClass("tab-current");
+		$("#tab2").fadeOut('fast');
+		$("#tab2").removeClass("tab-current");
 	}
 	
+	
+	
 	//move the scroll slightly to fix parallax loading image
+	/*
 	setTimeout(function() {
 		$(window).scrollTop($(window).scrollTop() + 1);
 		$(window).scrollTop($(window).scrollTop() - 1);
 	}, 10);
+	*/
 });
 
 
@@ -123,7 +201,10 @@ $(window).bind('DOMContentLoaded load resize', function () {
 
 (function($){
   $(function(){
-
+	$("#tab2").hide();
+	$("#tab3").hide();
+	$("#tab4").hide();
+	
     $('.button-collapse').sideNav();
     $('.parallax').parallax();
 
