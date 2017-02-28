@@ -69,6 +69,8 @@ $("#tab-opener").click(function() { //tab preloader
 				$('.tab2-hider').addClass("tab-display");
 				setTimeout(function() {
 					$('.tab2-hider').addClass("tab-shower");
+					$(window).scrollTop($(window).scrollTop() + 1);
+					$(window).scrollTop($(window).scrollTop() - 1);
 					$('#tab2').addClass("tab-current");
 					tab2loaded = true;
 				}, 10);
@@ -77,6 +79,10 @@ $("#tab-opener").click(function() { //tab preloader
 		else{
 			if(!($("#tab2").hasClass("tab-current"))){
 				$("#tab2").delay(10).fadeIn('slow');
+				setTimeout(function() {
+					$(window).scrollTop($(window).scrollTop() + 1);
+					$(window).scrollTop($(window).scrollTop() - 1);
+				}, 200);
 				$('#tab2').addClass("tab-current");
 			}
 		}
