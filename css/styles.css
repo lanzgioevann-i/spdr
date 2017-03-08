@@ -56,6 +56,11 @@ header{
 	src: url("fonts/BloggerSans.otf") format('opentype');
 }
 
+@font-face {
+	font-family: 'awesome';
+	src: url("fonts/FontAwesome.otf") format('opentype');
+}
+
 .font-qg{
 	font-family: 'qg', sans-serif;
 	font-size: 73px;
@@ -72,6 +77,10 @@ header{
 	font-family: 'blogger', sans-serif;
 	font-size: 25px;
 	color: #fff !important;
+}
+
+.font-awesome {
+	font-family: 'awesome', sans-serif;
 }
 
 @media only screen 
@@ -220,7 +229,7 @@ and (orientation : portrait) {
 }
 
 .lanz-bgteam {
-	background-color: #3d3d3d !important;
+	background-color: #565656 !important;
 	color: #fff !important;
 }
 
